@@ -1,0 +1,27 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "mix",
+    "watch": "mix watch"
+  },
+  "keywords": [],
+  "author": "Anyi Lozano",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/browserslist-config": "^4.1.0",
+    "laravel-mix": "^6.0.39",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "vue": "^2.6.14",
+    "vue-tables-2": "^2.3.5"
+  },
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ]
+}

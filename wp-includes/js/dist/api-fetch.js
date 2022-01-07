@@ -104,7 +104,7 @@ __webpack_require__.r(__webpack_exports__);
 // EXTERNAL MODULE: external ["wp","i18n"]
 var external_wp_i18n_ = __webpack_require__("l3Sj");
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/nonce.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/api2-fetch/build-module/middlewares/nonce.js
 /**
  * @param {string} nonce
  * @return {import('../types').APIFetchMiddleware & { nonce: string }} A middleware to enhance a request with a nonce.
@@ -138,7 +138,7 @@ function createNonceMiddleware(nonce) {
 
 /* harmony default export */ var nonce = (createNonceMiddleware);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/namespace-endpoint.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/api2-fetch/build-module/middlewares/namespace-endpoint.js
 /**
  * @type {import('../types').APIFetchMiddleware}
  */
@@ -166,7 +166,7 @@ const namespaceAndEndpointMiddleware = (options, next) => {
 
 /* harmony default export */ var namespace_endpoint = (namespaceAndEndpointMiddleware);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/root-url.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/api2-fetch/build-module/middlewares/root-url.js
 /**
  * Internal dependencies
  */
@@ -207,7 +207,7 @@ const createRootURLMiddleware = rootURL => (options, next) => {
 
 /* harmony default export */ var root_url = (createRootURLMiddleware);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/preloading.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/api2-fetch/build-module/middlewares/preloading.js
 /**
  * Given a path, returns a normalized path where equal query parameter values
  * will be treated as identical, regardless of order they appear in the original
@@ -278,7 +278,7 @@ function createPreloadingMiddleware(preloadedData) {
 // EXTERNAL MODULE: external ["wp","url"]
 var external_wp_url_ = __webpack_require__("Mmq9");
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/fetch-all-middleware.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/api2-fetch/build-module/middlewares/fetch-all-middleware.js
 /**
  * WordPress dependencies
  */
@@ -416,7 +416,7 @@ const fetchAllMiddleware = async (options, next) => {
 
 /* harmony default export */ var fetch_all_middleware = (fetchAllMiddleware);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/http-v1.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/api2-fetch/build-module/middlewares/http-v1.js
 /**
  * Set of HTTP methods which are eligible to be overridden.
  *
@@ -462,7 +462,7 @@ const httpV1Middleware = (options, next) => {
 
 /* harmony default export */ var http_v1 = (httpV1Middleware);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/user-locale.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/api2-fetch/build-module/middlewares/user-locale.js
 /**
  * WordPress dependencies
  */
@@ -489,7 +489,7 @@ const userLocaleMiddleware = (options, next) => {
 
 /* harmony default export */ var user_locale = (userLocaleMiddleware);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/utils/response.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/api2-fetch/build-module/utils/response.js
 /**
  * WordPress dependencies
  */
@@ -572,7 +572,7 @@ function parseAndThrowError(response, shouldParseResponse = true) {
   });
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/middlewares/media-upload.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/api2-fetch/build-module/middlewares/media-upload.js
 /**
  * WordPress dependencies
  */
@@ -648,7 +648,7 @@ const mediaUploadMiddleware = (options, next) => {
 
 /* harmony default export */ var media_upload = (mediaUploadMiddleware);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/api-fetch/build-module/index.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/api2-fetch/build-module/index.js
 /**
  * WordPress dependencies
  */

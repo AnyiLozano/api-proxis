@@ -473,9 +473,9 @@ var rememo = __webpack_require__("pPDe");
  */
 
 
-/** @typedef {import('../api/registration').WPBlockVariation} WPBlockVariation */
+/** @typedef {import('../api2/registration').WPBlockVariation} WPBlockVariation */
 
-/** @typedef {import('../api/registration').WPBlockVariationScope} WPBlockVariationScope */
+/** @typedef {import('../api2/registration').WPBlockVariationScope} WPBlockVariationScope */
 
 /** @typedef {import('./reducer').WPBlockCategory} WPBlockCategory */
 
@@ -781,7 +781,7 @@ const hasChildBlocksWithInserterSupport = (state, blockName) => {
  * External dependencies
  */
 
-/** @typedef {import('../api/registration').WPBlockVariation} WPBlockVariation */
+/** @typedef {import('../api2/registration').WPBlockVariation} WPBlockVariation */
 
 /**
  * Returns an action object used in signalling that block types have been added.
@@ -1052,7 +1052,7 @@ var external_wp_element_ = __webpack_require__("GRId");
 // EXTERNAL MODULE: external ["wp","dom"]
 var external_wp_dom_ = __webpack_require__("1CF3");
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/utils.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/utils.js
 /**
  * External dependencies
  */
@@ -1314,7 +1314,7 @@ function __experimentalGetBlockAttributesNamesByRole(name, role) {
   });
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/constants.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/constants.js
 /**
  * Array of valid keys in a block type settings deprecation object.
  *
@@ -1408,7 +1408,7 @@ const __EXPERIMENTAL_ELEMENTS = {
   h6: 'h6'
 };
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/registration.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/registration.js
 /* eslint no-console: [ 'error', { allow: [ 'error', 'warn' ] } ] */
 
 /**
@@ -2072,7 +2072,7 @@ const unregisterBlockVariation = (blockName, variationName) => {
   Object(external_wp_data_["dispatch"])(store).removeBlockVariations(blockName, variationName);
 };
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/factory.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/factory.js
 /**
  * External dependencies
  */
@@ -3597,7 +3597,7 @@ function tokenize(input, options) {
 // EXTERNAL MODULE: external ["wp","htmlEntities"]
 var external_wp_htmlEntities_ = __webpack_require__("rmEH");
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/validation/logger.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/validation/logger.js
 function createLogger() {
   /**
    * Creates a log handler with block validation prefix.
@@ -3742,7 +3742,7 @@ const withBlockContentContext = Object(external_wp_compose_["createHigherOrderCo
 }, 'withBlockContentContext');
 /* harmony default export */ var block_content_provider = (BlockContentProvider);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/serializer.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/serializer.js
 
 
 /**
@@ -4049,7 +4049,7 @@ function serialize(blocks, options) {
   return Object(external_lodash_["castArray"])(blocks).map(block => serializeBlock(block, options)).join('\n\n');
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/validation/index.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/validation/index.js
 /**
  * External dependencies
  */
@@ -4645,7 +4645,7 @@ function isValidBlockContent(blockTypeOrName, attributes, originalBlockContent) 
   return isValid;
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/matchers.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/matchers.js
 /**
  * External dependencies
  */
@@ -4689,7 +4689,7 @@ function matchers_html(selector, multilineTag) {
   };
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/node.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/node.js
 /**
  * Internal dependencies
  */
@@ -4824,7 +4824,7 @@ function node_matcher(selector) {
   matcher: node_matcher
 });
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/children.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/children.js
 /**
  * External dependencies
  */
@@ -4983,7 +4983,7 @@ function children_matcher(selector) {
   matcher: children_matcher
 });
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/parser.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/parser.js
 /**
  * External dependencies
  */
@@ -5622,7 +5622,7 @@ const createParse = parseImplementation => content => parseImplementation(conten
 const parseWithGrammar = createParse(external_wp_blockSerializationDefaultParser_["parse"]);
 /* harmony default export */ var parser = (parseWithGrammar);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/get-raw-transforms.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/get-raw-transforms.js
 /**
  * External dependencies
  */
@@ -5642,7 +5642,7 @@ function getRawTransforms() {
   });
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/html-to-blocks.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/html-to-blocks.js
 /**
  * Internal dependencies
  */
@@ -5685,7 +5685,7 @@ function htmlToBlocks(html) {
   });
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/normalise-blocks.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/normalise-blocks.js
 /**
  * WordPress dependencies
  */
@@ -5749,7 +5749,7 @@ function normaliseBlocks(HTML) {
   return accu.innerHTML;
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/special-comment-converter.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/special-comment-converter.js
 /**
  * WordPress dependencies
  */
@@ -5827,7 +5827,7 @@ function createNextpage(doc) {
   return node;
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/comment-remover.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/comment-remover.js
 /**
  * WordPress dependencies
  */
@@ -5845,7 +5845,7 @@ function commentRemover(node) {
   }
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/is-inline-content.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/is-inline-content.js
 /**
  * External dependencies
  */
@@ -5894,7 +5894,7 @@ function isInlineContent(HTML, contextTag) {
   return !nodes.some(isDoubleBR) && deepCheck(nodes, contextTag);
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/phrasing-content-reducer.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/phrasing-content-reducer.js
 /**
  * External dependencies
  */
@@ -5952,7 +5952,7 @@ function phrasingContentReducer(node, doc) {
   }
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/head-remover.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/head-remover.js
 function headRemover(node) {
   if (node.nodeName !== 'SCRIPT' && node.nodeName !== 'NOSCRIPT' && node.nodeName !== 'TEMPLATE' && node.nodeName !== 'STYLE') {
     return;
@@ -5961,7 +5961,7 @@ function headRemover(node) {
   node.parentNode.removeChild(node);
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/ms-list-converter.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/ms-list-converter.js
 /**
  * Browser dependencies
  */
@@ -6042,7 +6042,7 @@ function msListConverter(node, doc) {
   node.parentNode.removeChild(node);
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/list-reducer.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/list-reducer.js
 /**
  * WordPress dependencies
  */
@@ -6108,7 +6108,7 @@ function listReducer(node) {
 // EXTERNAL MODULE: external ["wp","blob"]
 var external_wp_blob_ = __webpack_require__("xTGt");
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/image-corrector.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/image-corrector.js
 /**
  * WordPress dependencies
  */
@@ -6168,7 +6168,7 @@ function imageCorrector(node) {
   }
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/blockquote-normaliser.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/blockquote-normaliser.js
 /**
  * Internal dependencies
  */
@@ -6181,7 +6181,7 @@ function blockquoteNormaliser(node) {
   node.innerHTML = normaliseBlocks(node.innerHTML);
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/figure-content-reducer.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/figure-content-reducer.js
 /**
  * External dependencies
  */
@@ -6282,7 +6282,7 @@ function figureContentReducer(node, doc, schema) {
 // EXTERNAL MODULE: external ["wp","shortcode"]
 var external_wp_shortcode_ = __webpack_require__("SVSp");
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/shortcode-converter.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/shortcode-converter.js
 /**
  * External dependencies
  */
@@ -6358,7 +6358,7 @@ function segmentHTMLToShortcodeBlock(HTML, lastIndex = 0, excludedBlockNames = [
 var showdown = __webpack_require__("M55E");
 var showdown_default = /*#__PURE__*/__webpack_require__.n(showdown);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/markdown-converter.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/markdown-converter.js
 /**
  * External dependencies
  */
@@ -6400,7 +6400,7 @@ function markdownConverter(text) {
   return converter.makeHtml(slackMarkdownVariantCorrector(text));
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/iframe-remover.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/iframe-remover.js
 /**
  * Removes iframes.
  *
@@ -6415,7 +6415,7 @@ function iframeRemover(node) {
   }
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/google-docs-uid-remover.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/google-docs-uid-remover.js
 /**
  * WordPress dependencies
  */
@@ -6428,7 +6428,7 @@ function googleDocsUIdRemover(node) {
   Object(external_wp_dom_["unwrap"])(node);
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/utils.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/utils.js
 /**
  * External dependencies
  */
@@ -6601,7 +6601,7 @@ function getSibling(node, which) {
   return getSibling(parentNode, which);
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/html-formatting-remover.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/html-formatting-remover.js
 /**
  * Internal dependencies
  */
@@ -6673,7 +6673,7 @@ function htmlFormattingRemover(node) {
   }
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/br-remover.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/br-remover.js
 /**
  * Internal dependencies
  */
@@ -6696,7 +6696,7 @@ function brRemover(node) {
   node.parentNode.removeChild(node);
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/empty-paragraph-remover.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/empty-paragraph-remover.js
 /**
  * Removes empty paragraph elements.
  *
@@ -6714,7 +6714,7 @@ function emptyParagraphRemover(node) {
   node.parentNode.removeChild(node);
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/paste-handler.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/paste-handler.js
 /**
  * External dependencies
  */
@@ -6903,7 +6903,7 @@ function pasteHandler({
   return blocks;
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/raw-handling/index.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/raw-handling/index.js
 /**
  * External dependencies
  */
@@ -6977,7 +6977,7 @@ function rawHandler({
   }));
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/categories.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/categories.js
 /**
  * WordPress dependencies
  */
@@ -7019,7 +7019,7 @@ function categories_updateCategory(slug, category) {
   Object(external_wp_data_["dispatch"])(store).updateCategory(slug, category);
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/templates.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/templates.js
 /**
  * External dependencies
  */
@@ -7121,7 +7121,7 @@ function synchronizeBlocksWithTemplate(blocks = [], template) {
   });
 }
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api/index.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/blocks/build-module/api2/index.js
 // The blocktype is the most important concept within the block API. It defines
 // all aspects of the block configuration and its interfaces, including `edit`
 // and `save`. The transforms specification allows converting one blocktype to

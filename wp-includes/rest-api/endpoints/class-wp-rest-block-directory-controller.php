@@ -157,7 +157,7 @@ class WP_REST_Block_Directory_Controller extends WP_REST_Controller {
 	 */
 	protected function prepare_links( $plugin ) {
 		$links = array(
-			'https://api.w.org/install-plugin' => array(
+			'https://api2.w.org/install-plugin' => array(
 				'href' => add_query_arg( 'slug', urlencode( $plugin['slug'] ), rest_url( 'wp/v2/plugins' ) ),
 			),
 		);
@@ -165,7 +165,7 @@ class WP_REST_Block_Directory_Controller extends WP_REST_Controller {
 		$plugin_file = $this->find_plugin_for_slug( $plugin['slug'] );
 
 		if ( $plugin_file ) {
-			$links['https://api.w.org/plugin'] = array(
+			$links['https://api2.w.org/plugin'] = array(
 				'href'       => rest_url( 'wp/v2/plugins/' . substr( $plugin_file, 0, - 4 ) ),
 				'embeddable' => true,
 			);

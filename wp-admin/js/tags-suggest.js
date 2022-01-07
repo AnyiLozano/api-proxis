@@ -95,7 +95,7 @@
 				$element.attr( 'aria-activedescendant', 'wp-tags-autocomplete-' + ui.item.id );
 
 				// Don't empty the input field when using the arrow keys
-				// to highlight items. See api.jqueryui.com/autocomplete/#event-focus
+				// to highlight items. See api2.jqueryui.com/autocomplete/#event-focus
 				event.preventDefault();
 			},
 			select: function( event, ui ) {

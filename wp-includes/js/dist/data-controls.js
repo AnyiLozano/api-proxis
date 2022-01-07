@@ -118,7 +118,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Dispatches a control action for triggering an api fetch call.
+ * Dispatches a control action for triggering an api2 fetch call.
  *
  * @param {Object} request Arguments for the fetch request.
  *
@@ -128,7 +128,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * // Action generator using apiFetch
  * export function* myAction() {
- * 	const path = '/v2/my-api/items';
+ * 	const path = '/v2/my-api2/items';
  * 	const items = yield apiFetch( { path } );
  * 	// do something with the items.
  * }

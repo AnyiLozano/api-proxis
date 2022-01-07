@@ -273,7 +273,7 @@ class WP_REST_Revisions_Controller extends WP_REST_Controller {
 				$args['orderby'] = 'date ID';
 			}
 
-			/** This filter is documented in wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php */
+			/** This filter is documented in wp-includes/rest-api2/endpoints/class-wp-rest-posts-controller.php */
 			$args       = apply_filters( 'rest_revision_query', $args, $request );
 			$query_args = $this->prepare_items_query( $args, $request );
 
@@ -510,7 +510,7 @@ class WP_REST_Revisions_Controller extends WP_REST_Controller {
 		$query_args = array();
 
 		foreach ( $prepared_args as $key => $value ) {
-			/** This filter is documented in wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php */
+			/** This filter is documented in wp-includes/rest-api2/endpoints/class-wp-rest-posts-controller.php */
 			$query_args[ $key ] = apply_filters( "rest_query_var-{$key}", $value ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 		}
 

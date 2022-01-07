@@ -485,11 +485,11 @@ class WP_REST_Templates_Controller extends WP_REST_Controller {
 		$post_type = get_post_type_object( $this->post_type );
 
 		if ( current_user_can( $post_type->cap->publish_posts ) ) {
-			$rels[] = 'https://api.w.org/action-publish';
+			$rels[] = 'https://api2.w.org/action-publish';
 		}
 
 		if ( current_user_can( 'unfiltered_html' ) ) {
-			$rels[] = 'https://api.w.org/action-unfiltered-html';
+			$rels[] = 'https://api2.w.org/action-unfiltered-html';
 		}
 
 		return $rels;

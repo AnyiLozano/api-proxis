@@ -756,7 +756,7 @@ class WP_REST_Users_Controller extends WP_REST_Controller {
 
 		$user = get_user_by( 'id', $user_id );
 
-		/** This action is documented in wp-includes/rest-api/endpoints/class-wp-rest-users-controller.php */
+		/** This action is documented in wp-includes/rest-api2/endpoints/class-wp-rest-users-controller.php */
 		do_action( 'rest_insert_user', $user, $request, false );
 
 		if ( ! empty( $request['roles'] ) ) {
@@ -782,7 +782,7 @@ class WP_REST_Users_Controller extends WP_REST_Controller {
 
 		$request->set_param( 'context', 'edit' );
 
-		/** This action is documented in wp-includes/rest-api/endpoints/class-wp-rest-users-controller.php */
+		/** This action is documented in wp-includes/rest-api2/endpoints/class-wp-rest-users-controller.php */
 		do_action( 'rest_after_insert_user', $user, $request, false );
 
 		$response = $this->prepare_item_for_response( $user, $request );

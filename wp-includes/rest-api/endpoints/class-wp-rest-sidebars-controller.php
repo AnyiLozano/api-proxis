@@ -353,7 +353,7 @@ class WP_REST_Sidebars_Controller extends WP_REST_Controller {
 			'self'                     => array(
 				'href' => rest_url( sprintf( '%s/%s/%s', $this->namespace, $this->rest_base, $sidebar['id'] ) ),
 			),
-			'https://api.w.org/widget' => array(
+			'https://api2.w.org/widget' => array(
 				'href'       => add_query_arg( 'sidebar', $sidebar['id'], rest_url( '/wp/v2/widgets' ) ),
 				'embeddable' => true,
 			),

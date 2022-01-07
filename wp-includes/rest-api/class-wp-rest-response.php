@@ -256,7 +256,7 @@ class WP_REST_Response extends WP_HTTP_Response {
 		$curies = array(
 			array(
 				'name'      => 'wp',
-				'href'      => 'https://api.w.org/{rel}',
+				'href'      => 'https://api2.w.org/{rel}',
 				'templated' => true,
 			),
 		);

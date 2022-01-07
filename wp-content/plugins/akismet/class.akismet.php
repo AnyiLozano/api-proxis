@@ -1280,7 +1280,7 @@ class Akismet {
 		$alert_header_names  = array(
 			'code',
 			'msg',
-			'api-calls',
+			'api2-calls',
 			'usage-limit',
 			'upgrade-plan',
 			'upgrade-url',

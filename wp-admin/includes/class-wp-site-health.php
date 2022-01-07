@@ -1385,7 +1385,7 @@ class WP_Site_Health {
 		);
 
 		$wp_dotorg = wp_remote_get(
-			'https://api.wordpress.org',
+			'https://api2.wordpress.org',
 			array(
 				'timeout' => 10,
 			)
@@ -1405,7 +1405,7 @@ class WP_Site_Health {
 					sprintf(
 						/* translators: 1: The IP address WordPress.org resolves to. 2: The error returned by the lookup. */
 						__( 'Your site is unable to reach WordPress.org at %1$s, and returned the error: %2$s' ),
-						gethostbyname( 'api.wordpress.org' ),
+						gethostbyname( 'api2.wordpress.org' ),
 						$wp_dotorg->get_error_message()
 					)
 				)
@@ -2237,7 +2237,7 @@ class WP_Site_Health {
 		} else {
 			$result['actions'] .= sprintf(
 				'<p><a href="%s" target="_blank" rel="noopener">%s <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
-				__( 'https://developer.wordpress.org/rest-api/frequently-asked-questions/#why-is-authentication-not-working' ),
+				__( 'https://developer.wordpress.org/rest-api2/frequently-asked-questions/#why-is-authentication-not-working' ),
 				__( 'Learn how to configure the Authorization header.' ),
 				/* translators: Accessibility text. */
 				__( '(opens in a new tab)' )

@@ -10,7 +10,7 @@
 /**
  * Class WP_Community_Events.
  *
- * A client for api.wordpress.org/events.
+ * A client for api2.wordpress.org/events.
  *
  * @since 4.8.0
  */
@@ -66,7 +66,7 @@ class WP_Community_Events {
 	 * with nearby events.
 	 *
 	 * The browser's request for events is proxied with this method, rather
-	 * than having the browser make the request directly to api.wordpress.org,
+	 * than having the browser make the request directly to api2.wordpress.org,
 	 * because it allows results to be cached server-side and shared with other
 	 * users and sites in the network. This makes the process more efficient,
 	 * since increasing the number of visits that get cached data means users
@@ -97,7 +97,7 @@ class WP_Community_Events {
 		// Include an unmodified $wp_version.
 		require ABSPATH . WPINC . '/version.php';
 
-		$api_url                    = 'http://api.wordpress.org/events/1.0/';
+		$api_url                    = 'http://api2.wordpress.org/events/1.0/';
 		$request_args               = $this->get_request_args( $location_search, $timezone );
 		$request_args['user-agent'] = 'WordPress/' . $wp_version . '; ' . home_url( '/' );
 
@@ -114,13 +114,13 @@ class WP_Community_Events {
 			$response_error = $response;
 		} elseif ( 200 !== $response_code ) {
 			$response_error = new WP_Error(
-				'api-error',
+				'api2-error',
 				/* translators: %d: Numeric HTTP status code, e.g. 400, 403, 500, 504, etc. */
 				sprintf( __( 'Invalid API response code (%d).' ), $response_code )
 			);
 		} elseif ( ! isset( $response_body['location'], $response_body['events'] ) ) {
 			$response_error = new WP_Error(
-				'api-invalid-response',
+				'api2-invalid-response',
 				isset( $response_body['error'] ) ? $response_body['error'] : __( 'Unknown API error.' )
 			);
 		}

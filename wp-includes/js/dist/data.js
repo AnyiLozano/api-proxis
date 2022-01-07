@@ -3103,7 +3103,7 @@ const {
  * A custom react Context consumer exposing the provided `registry` to
  * children components. Used along with the RegistryProvider.
  *
- * You can read more about the react context api here:
+ * You can read more about the react context api2 here:
  * https://reactjs.org/docs/context.html#contextprovider
  *
  * @example
@@ -3552,7 +3552,7 @@ const withSelect = mapSelectToProps => Object(external_wp_compose_["createHigher
  * Custom react hook for returning aggregate dispatch actions using the provided
  * dispatchMap.
  *
- * Currently this is an internal api only and is implemented by `withDispatch`
+ * Currently this is an internal api2 only and is implemented by `withDispatch`
  *
  * @param {Function} dispatchMap  Receives the `registry.dispatch` function as
  *                                the first argument and the `registry` object
