@@ -1,15 +1,20 @@
 <?php
 
-require __DIR__ . "/Home/Home.php";
+namespace Api;
 
-use Api\Home;
+require dirname(__DIR__) . "/api/routes/api.php";
+require dirname(__DIR__) . "/api/bootstrap/bootstrap.php";
 
 class Api {
-    public ?Home $home = null;
+    /**
+     * @var ?Routes
+     */
+    public ?Routes $routes = null;
+
     public function __construct()
     {
         add_action("admin_menu", array($this, "configMenuBar"));
-        $this->home = new Home();
+        $this->routes = new Routes();
     }
 
     public function configMenuBar()
@@ -21,14 +26,14 @@ class Api {
             "content_admin",
         );
 
-        add_submenu_page(
-            "content_admin",
-            "Home - Administrador de contenido | Api Praxis",
-            "Home",
-            "manage_options",
-            "home_content_admin",
-            array($this->home, "HomeView"),
-            1
-        );
+//        add_submenu_page(
+//            "content_admin",
+//            "Home - Administrador de contenido | Api Praxis",
+//            "Home",
+//            "manage_options",
+//            "home_content_admin",
+//            array($this->home, "HomeView"),
+//            1
+//        );
     }
 }

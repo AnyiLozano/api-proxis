@@ -1,0 +1,7 @@
+{
+    "require": {
+        "illuminate/database": "^8.79",
+        "illuminate/events": "^8.79",
+        "protonlabs/illuminate-foundation": "^7.2"
+    }
+}
