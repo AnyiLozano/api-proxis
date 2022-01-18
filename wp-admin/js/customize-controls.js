@@ -1522,7 +1522,7 @@
 				}
 			});
 
-			// This is very similar to what is found for api.Panel.attachEvents().
+			// This is very similar to what is found for api2.Panel.attachEvents().
 			section.container.find( '.customize-section-title .customize-help-toggle' ).on( 'click', function() {
 
 				meta = section.container.find( '.section-meta' );
@@ -2662,7 +2662,7 @@
 		},
 
 		/**
-		 * Overrides api.Section.prototype.onChangeExpanded to prevent collapse/expand effect
+		 * Overrides api2.Section.prototype.onChangeExpanded to prevent collapse/expand effect
 		 * on other sections and panels.
 		 *
 		 * @since 4.9.0
@@ -4087,7 +4087,7 @@
 				var availableItem, $content, itemTemplate;
 
 				// Prepare the new page as an available menu item.
-				// See api.Menus.submitNew().
+				// See api2.Menus.submitNew().
 				availableItem = new api.Menus.AvailableItemModel( {
 					'id': 'post-' + data.post_id, // Used for available menu item Backbone models.
 					'title': title,
@@ -4856,7 +4856,7 @@
 		},
 
 		/**
-		 * Returns a new instance of api.HeaderTool.ImageModel based on the currently
+		 * Returns a new instance of api2.HeaderTool.ImageModel based on the currently
 		 * saved header image (if any).
 		 *
 		 * @since 4.2.0
@@ -6209,7 +6209,7 @@
 	api.notifications = new api.Notifications();
 
 	api.PreviewFrame = api.Messenger.extend(/** @lends wp.customize.PreviewFrame.prototype */{
-		sensitivity: null, // Will get set to api.settings.timeouts.previewFrameSensitivity.
+		sensitivity: null, // Will get set to api2.settings.timeouts.previewFrameSensitivity.
 
 		/**
 		 * An object that fetches a preview in the background of the document, which
@@ -6423,7 +6423,7 @@
 		 *
 		 * This function is named "uuid" for historical reasons, but it is a
 		 * misnomer as it is not an actual UUID, and it is not universally unique.
-		 * This is not to be confused with `api.settings.changeset.uuid`.
+		 * This is not to be confused with `api2.settings.changeset.uuid`.
 		 *
 		 * @return {string}
 		 */
@@ -6450,7 +6450,7 @@
 	};
 
 	api.Previewer = api.Messenger.extend(/** @lends wp.customize.Previewer.prototype */{
-		refreshBuffer: null, // Will get set to api.settings.timeouts.windowRefresh.
+		refreshBuffer: null, // Will get set to api2.settings.timeouts.windowRefresh.
 
 		/**
 		 * @constructs wp.customize.Previewer
@@ -8714,8 +8714,8 @@
 			};
 		}());
 
-		// Previewed device bindings. (The api.previewedDevice property
-		// is how this Value was first introduced, but since it has moved to api.state.)
+		// Previewed device bindings. (The api2.previewedDevice property
+		// is how this Value was first introduced, but since it has moved to api2.state.)
 		api.previewedDevice = api.state( 'previewedDevice' );
 
 		// Set the default device.

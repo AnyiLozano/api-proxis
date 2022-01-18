@@ -941,8 +941,8 @@ class Akismet_Admin {
 		}
 		
 		//the user can choose to auto connect their API key by clicking a button on the akismet done page
-		//if jetpack, get verified api key by using connected wpcom user id
-		//if no jetpack, get verified api key by using an akismet token	
+		//if jetpack, get verified api2 key by using connected wpcom user id
+		//if no jetpack, get verified api2 key by using an akismet token
 		
 		$akismet_user = false;
 		
@@ -1008,7 +1008,7 @@ class Akismet_Admin {
 		$notices = array();
 
 		if ( empty( self::$notices ) ) {
-			if ( ! empty( $stat_totals['all'] ) && isset( $stat_totals['all']->time_saved ) && $akismet_user->status == 'active' && $akismet_user->account_type == 'free-api-key' ) {
+			if ( ! empty( $stat_totals['all'] ) && isset( $stat_totals['all']->time_saved ) && $akismet_user->status == 'active' && $akismet_user->account_type == 'free-api2-key' ) {
 
 				$time_saved = false;
 

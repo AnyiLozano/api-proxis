@@ -12801,7 +12801,7 @@ function attributesFromMedia(setAttributes) {
         mediaType = IMAGE_BACKGROUND_TYPE;
       } else {
         // only images and videos are accepted so if the media_type is not an image we can assume it is a video.
-        // Videos contain the media type of 'file' in the object returned from the rest api.
+        // Videos contain the media type of 'file' in the object returned from the rest api2.
         mediaType = VIDEO_BACKGROUND_TYPE;
       }
     } else {
@@ -17223,7 +17223,7 @@ function edit_attributesFromMedia({
         mediaType = 'image';
       } else {
         // only images and videos are accepted so if the media_type is not an image we can assume it is a video.
-        // video contain the media type of 'file' in the object returned from the rest api.
+        // video contain the media type of 'file' in the object returned from the rest api2.
         mediaType = 'video';
       }
     } else {

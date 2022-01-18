@@ -1,0 +1,33 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "mix",
+    "watch": "mix watch"
+  },
+  "keywords": [],
+  "author": "Anyi Lozano",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/browserslist-config": "^4.1.0",
+    "laravel-mix": "^6.0.39",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bootstrap": "^4.6.0",
+    "postcss-css-variables": "^0.18.0",
+    "postcss-nested": "^5.0.6",
+    "vue": "^2.6.14",
+    "vue-loading-overlay": "^3.4.2",
+    "vue-select": "^3.16.0",
+    "vue-sweetalert2": "^5.0.2",
+    "vue-tables-2": "^2.3.5"
+  },
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ]
+}

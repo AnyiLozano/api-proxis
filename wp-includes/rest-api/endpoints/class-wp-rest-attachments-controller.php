@@ -345,7 +345,7 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 
 		$request->set_param( 'context', 'edit' );
 
-		/** This action is documented in wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php */
+		/** This action is documented in wp-includes/rest-api2/endpoints/class-wp-rest-attachments-controller.php */
 		do_action( 'rest_after_insert_attachment', $attachment, $request, false );
 
 		wp_after_insert_post( $attachment, true, $attachment_before );

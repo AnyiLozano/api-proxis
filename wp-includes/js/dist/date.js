@@ -1380,7 +1380,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 				if (name) {
 					return name;
 				}
-				logError("Moment Timezone found " + intlName + " from the Intl api, but did not have that data loaded.");
+				logError("Moment Timezone found " + intlName + " from the Intl api2, but did not have that data loaded.");
 			}
 		} catch (e) {
 			// Intl unavailable, fall back to manual guessing.

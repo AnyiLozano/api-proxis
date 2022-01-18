@@ -429,7 +429,7 @@
 							$input.attr( 'aria-activedescendant', 'mce-wp-autocomplete-' + ui.item.ID );
 							/*
 							 * Don't empty the URL input field, when using the arrow keys to
-							 * highlight items. See api.jqueryui.com/autocomplete/#event-focus
+							 * highlight items. See api2.jqueryui.com/autocomplete/#event-focus
 							 */
 							event.preventDefault();
 						},

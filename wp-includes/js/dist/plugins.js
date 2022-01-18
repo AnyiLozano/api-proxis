@@ -367,7 +367,7 @@ const plugins = Object(external_wp_element_["createElement"])(external_wp_primit
 }));
 /* harmony default export */ var library_plugins = (plugins);
 
-// CONCATENATED MODULE: ./node_modules/@wordpress/plugins/build-module/api/index.js
+// CONCATENATED MODULE: ./node_modules/@wordpress/plugins/build-module/api2/index.js
 /* eslint no-console: [ 'error', { allow: [ 'error' ] } ] */
 
 /**
