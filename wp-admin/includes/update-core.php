@@ -1672,7 +1672,7 @@ function _upgrade_422_find_genericons_files_in_folder( $directory ) {
  */
 function _upgrade_440_force_deactivate_incompatible_plugins() {
 	if ( defined( 'REST_API_VERSION' ) && version_compare( REST_API_VERSION, '2.0-beta4', '<=' ) ) {
-		deactivate_plugins( array( 'rest-api/plugin.php' ), true );
+		deactivate_plugins( array( 'rest-api2/plugin.php' ), true );
 	}
 }
 

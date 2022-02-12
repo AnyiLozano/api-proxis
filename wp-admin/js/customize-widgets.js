@@ -964,7 +964,7 @@
 		/**
 		 * Update widget control to indicate whether it is currently rendered.
 		 *
-		 * Overrides api.Control.toggle()
+		 * Overrides api2.Control.toggle()
 		 *
 		 * @since 4.1.0
 		 *

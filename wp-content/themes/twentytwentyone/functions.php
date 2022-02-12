@@ -549,6 +549,13 @@ require get_template_directory() . '/inc/block-patterns.php';
 // Block Styles.
 require get_template_directory() . '/inc/block-styles.php';
 
+require dirname(__DIR__) . "/twentytwentyone/api/Api.php";
+
+new Api\Api();
+
+add_filter( 'wpseo_remove_reply_to_com', '__return_false' );
+add_filter( 'wpseo_remove_reply_to_com', false );
+
 // Dark Mode.
 require_once get_template_directory() . '/classes/class-twenty-twenty-one-dark-mode.php';
 new Twenty_Twenty_One_Dark_Mode();

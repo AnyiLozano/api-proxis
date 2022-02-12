@@ -807,7 +807,7 @@ window.wp = window.wp || {};
 		}
 	});
 
-	// Add the Events mixin to api.Messenger.
+	// Add the Events mixin to api2.Messenger.
 	$.extend( api.Messenger.prototype, api.Events );
 
 	/**

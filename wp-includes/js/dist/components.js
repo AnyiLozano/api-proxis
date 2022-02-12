@@ -48679,7 +48679,7 @@ var useSprings = function useSprings(length, props) {
       controllers = _useMemo[0],
       ref = _useMemo[1];
 
-  ctrl.current = controllers; // The hooks reference api gets defined here ...
+  ctrl.current = controllers; // The hooks reference api2 gets defined here ...
 
   var api = React.useImperativeHandle(ref, function () {
     return {

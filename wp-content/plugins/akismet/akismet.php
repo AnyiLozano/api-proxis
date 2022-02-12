@@ -47,7 +47,7 @@ register_deactivation_hook( __FILE__, array( 'Akismet', 'plugin_deactivation' ) 
 
 require_once( AKISMET__PLUGIN_DIR . 'class.akismet.php' );
 require_once( AKISMET__PLUGIN_DIR . 'class.akismet-widget.php' );
-require_once( AKISMET__PLUGIN_DIR . 'class.akismet-rest-api.php' );
+require_once( AKISMET__PLUGIN_DIR . 'class.akismet-rest-api2.php' );
 
 add_action( 'init', array( 'Akismet', 'init' ) );
 

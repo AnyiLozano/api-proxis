@@ -236,7 +236,7 @@
 						</table>
 						<div class="akismet-card-actions">
 							<div id="publishing-action">
-								<?php Akismet::view( 'get', array( 'text' => ( $akismet_user->account_type == 'free-api-key' && $akismet_user->status == 'active' ? __( 'Upgrade' , 'akismet') : __( 'Change' , 'akismet') ), 'redirect' => 'upgrade' ) ); ?>
+								<?php Akismet::view( 'get', array( 'text' => ( $akismet_user->account_type == 'free-api2-key' && $akismet_user->status == 'active' ? __( 'Upgrade' , 'akismet') : __( 'Change' , 'akismet') ), 'redirect' => 'upgrade' ) ); ?>
 							</div>
 							<div class="clear"></div>
 						</div>

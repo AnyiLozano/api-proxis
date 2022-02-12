@@ -229,7 +229,7 @@
 					)
 				);
 
-				echo '<a href="https://docs.akismet.com/akismet-api-usage-limits/" target="_blank">';
+				echo '<a href="https://docs.akismet.com/akismet-api2-usage-limits/" target="_blank">';
 				echo esc_html( __( 'Learn more about usage limits.', 'akismet' ) );
 				echo '</a>';
 
@@ -237,7 +237,7 @@
 			case 'SECOND_MONTH_OVER_LIMIT':
 				echo esc_html( __( 'Your Akismet usage has been over your plan&#8217;s limit for two consecutive months. Next month, we will restrict your account after you reach the limit. Please consider upgrading your plan.', 'akismet' ) );
 
-				echo '<a href="https://docs.akismet.com/akismet-api-usage-limits/" target="_blank">';
+				echo '<a href="https://docs.akismet.com/akismet-api2-usage-limits/" target="_blank">';
 				echo esc_html( __( 'Learn more about usage limits.', 'akismet' ) );
 				echo '</a>';
 
@@ -245,7 +245,7 @@
 			case 'THIRD_MONTH_APPROACHING_LIMIT':
 				echo esc_html( __( 'Your Akismet usage is nearing your plan&#8217;s limit for the third consecutive month. We will restrict your account after you reach the limit. Upgrade your plan so Akismet can continue blocking spam.', 'akismet' ) );
 
-				echo '<a href="https://docs.akismet.com/akismet-api-usage-limits/" target="_blank">';
+				echo '<a href="https://docs.akismet.com/akismet-api2-usage-limits/" target="_blank">';
 				echo esc_html( __( 'Learn more about usage limits.', 'akismet' ) );
 				echo '</a>';
 
@@ -254,7 +254,7 @@
 			case 'FOUR_PLUS_MONTHS_OVER_LIMIT':
 				echo esc_html( __( 'Your Akismet usage has been over your plan&#8217;s limit for three consecutive months. We have restricted your account for the rest of the month. Upgrade your plan so Akismet can continue blocking spam.', 'akismet' ) );
 
-				echo '<a href="https://docs.akismet.com/akismet-api-usage-limits/" target="_blank">';
+				echo '<a href="https://docs.akismet.com/akismet-api2-usage-limits/" target="_blank">';
 				echo esc_html( __( 'Learn more about usage limits.', 'akismet' ) );
 				echo '</a>';
 

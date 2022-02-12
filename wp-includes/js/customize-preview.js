@@ -790,7 +790,7 @@
 
 			/*
 			 * Replace the UUID in the URL. Note that the wrapped history.replaceState()
-			 * will handle injecting the current api.settings.changeset.uuid into the URL,
+			 * will handle injecting the current api2.settings.changeset.uuid into the URL,
 			 * so this is merely to trigger that logic.
 			 */
 			if ( history.replaceState ) {

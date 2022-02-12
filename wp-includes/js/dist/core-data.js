@@ -2892,7 +2892,7 @@ function reducer_entity(entityConfig) {
               // objects with more properties, so we use `get` here for the
               // comparison.
               !Object(external_lodash_["isEqual"])(edits[key], Object(external_lodash_["get"])(record[key], 'raw', record[key])) && ( // Sometimes the server alters the sent value which means
-              // we need to also remove the edits before the api request.
+              // we need to also remove the edits before the api2 request.
               !action.persistedEdits || !Object(external_lodash_["isEqual"])(edits[key], action.persistedEdits[key]))) {
                 acc[key] = edits[key];
               }
@@ -4397,7 +4397,7 @@ function* resolvers_canUser(action, resource, id) {
   let allowHeader;
 
   if (Object(external_lodash_["hasIn"])(response, ['headers', 'get'])) {
-    // If the request is fetched using the fetch api, the header can be
+    // If the request is fetched using the fetch api2, the header can be
     // retrieved using the 'get' method.
     allowHeader = response.headers.get('allow');
   } else {

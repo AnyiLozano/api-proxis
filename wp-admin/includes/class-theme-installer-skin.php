@@ -39,7 +39,7 @@ class Theme_Installer_Skin extends WP_Upgrader_Skin {
 
 		$this->type      = $args['type'];
 		$this->url       = $args['url'];
-		$this->api       = isset( $args['api'] ) ? $args['api'] : array();
+		$this->api       = isset( $args['api2'] ) ? $args['api2'] : array();
 		$this->overwrite = $args['overwrite'];
 
 		parent::__construct( $args );

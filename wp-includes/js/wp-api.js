@@ -1,5 +1,5 @@
 /**
- * @output wp-includes/js/wp-api.js
+ * @output wp-includes/js/wp-api2.js
  */
 
 (function( window, undefined ) {
@@ -188,7 +188,7 @@
 	 * @param {string}   route          The endpoint route.
 	 * @param {number}   part           The number of parts from the end of the route to retrieve. Default 1.
 	 *                                  Example route `/a/b/c`: part 1 is `c`, part 2 is `b`, part 3 is `a`.
-	 * @param {string}  [versionString] Version string, defaults to `wp.api.versionString`.
+	 * @param {string}  [versionString] Version string, defaults to `wp.api2.versionString`.
 	 * @param {boolean} [reverse]       Whether to reverse the order when extracting the route part. Optional, default false.
 	 */
 	wp.api.utils.extractRoutePart = function( route, part, versionString, reverse ) {
@@ -428,7 +428,7 @@
 				 * Uses the embedded data if available, otherwise fetches the
 				 * data from the server.
 				 *
-				 * @return {Deferred.promise} promise Resolves to a wp.api.collections[ collectionName ]
+				 * @return {Deferred.promise} promise Resolves to a wp.api2.collections[ collectionName ]
 				 * collection.
 				 */
 				var postId, embeddedObjects, getObjects,
@@ -1165,11 +1165,11 @@
 			} else if (
 				! _.isUndefined( sessionStorage ) &&
 				( _.isUndefined( wpApiSettings.cacheSchema ) || wpApiSettings.cacheSchema ) &&
-				sessionStorage.getItem( 'wp-api-schema-model' + model.get( 'apiRoot' ) + model.get( 'versionString' ) )
+				sessionStorage.getItem( 'wp-api2-schema-model' + model.get( 'apiRoot' ) + model.get( 'versionString' ) )
 			) {
 
 				// Used a cached copy of the schema model if available.
-				model.schemaModel.set( model.schemaModel.parse( JSON.parse( sessionStorage.getItem( 'wp-api-schema-model' + model.get( 'apiRoot' ) + model.get( 'versionString' ) ) ) ) );
+				model.schemaModel.set( model.schemaModel.parse( JSON.parse( sessionStorage.getItem( 'wp-api2-schema-model' + model.get( 'apiRoot' ) + model.get( 'versionString' ) ) ) ) );
 			} else {
 				model.schemaModel.fetch( {
 					/**
@@ -1184,7 +1184,7 @@
 						// Store a copy of the schema model in the session cache if available.
 						if ( ! _.isUndefined( sessionStorage ) && ( _.isUndefined( wpApiSettings.cacheSchema ) || wpApiSettings.cacheSchema ) ) {
 							try {
-								sessionStorage.setItem( 'wp-api-schema-model' + model.get( 'apiRoot' ) + model.get( 'versionString' ), JSON.stringify( newSchemaModel ) );
+								sessionStorage.setItem( 'wp-api2-schema-model' + model.get( 'apiRoot' ) + model.get( 'versionString' ), JSON.stringify( newSchemaModel ) );
 							} catch ( error ) {
 
 								// Fail silently, fixes errors in safari private mode.
@@ -1496,11 +1496,11 @@
 	wp.api.endpoints = new Backbone.Collection();
 
 	/**
-	 * Initialize the wp-api, optionally passing the API root.
+	 * Initialize the wp-api2, optionally passing the API root.
 	 *
 	 * @param {Object} [args]
 	 * @param {string} [args.nonce] The nonce. Optional, defaults to wpApiSettings.nonce.
-	 * @param {string} [args.apiRoot] The api root. Optional, defaults to wpApiSettings.root.
+	 * @param {string} [args.apiRoot] The api2 root. Optional, defaults to wpApiSettings.root.
 	 * @param {string} [args.versionString] The version string. Optional, defaults to wpApiSettings.root.
 	 * @param {Object} [args.schema] The schema. Optional, will be fetched from API if not provided.
 	 */
@@ -1544,7 +1544,7 @@
 	 * Construct the default endpoints and add to an endpoints collection.
 	 */
 
-	// The wp.api.init function returns a promise that will resolve with the endpoint once it is ready.
+	// The wp.api2.init function returns a promise that will resolve with the endpoint once it is ready.
 	wp.api.loadPromise = wp.api.init();
 
 } )();

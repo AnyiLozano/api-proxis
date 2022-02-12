@@ -448,7 +448,7 @@ function block_editor_rest_api_preload( array $preload_paths, $block_editor_cont
 	$post = $backup_global_post;
 
 	wp_add_inline_script(
-		'wp-api-fetch',
+		'wp-api2-fetch',
 		sprintf(
 			'wp.apiFetch.use( wp.apiFetch.createPreloadingMiddleware( %s ) );',
 			wp_json_encode( $preload_data )

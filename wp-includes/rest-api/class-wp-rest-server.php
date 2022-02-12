@@ -284,7 +284,7 @@ class WP_REST_Server {
 
 		$api_root = get_rest_url();
 		if ( ! empty( $api_root ) ) {
-			$this->send_header( 'Link', '<' . esc_url_raw( $api_root ) . '>; rel="https://api.w.org/"' );
+			$this->send_header( 'Link', '<' . esc_url_raw( $api_root ) . '>; rel="https://api2.w.org/"' );
 		}
 
 		/*
@@ -697,7 +697,7 @@ class WP_REST_Server {
 
 					$response = $this->dispatch( $request );
 
-					/** This filter is documented in wp-includes/rest-api/class-wp-rest-server.php */
+					/** This filter is documented in wp-includes/rest-api2/class-wp-rest-server.php */
 					$response = apply_filters( 'rest_post_dispatch', rest_ensure_response( $response ), $this, $request );
 
 					$this->embed_cache[ $item['href'] ] = $this->response_to_data( $response, false );
@@ -1225,7 +1225,7 @@ class WP_REST_Server {
 		);
 
 		$response = new WP_REST_Response( $available );
-		$response->add_link( 'help', 'https://developer.wordpress.org/rest-api/' );
+		$response->add_link( 'help', 'https://developer.wordpress.org/rest-api2/' );
 		$this->add_active_theme_link_to_index( $response );
 		$this->add_site_logo_to_index( $response );
 
@@ -1268,7 +1268,7 @@ class WP_REST_Server {
 
 		if ( $should_add ) {
 			$theme = wp_get_theme();
-			$response->add_link( 'https://api.w.org/active-theme', rest_url( 'wp/v2/themes/' . $theme->get_stylesheet() ) );
+			$response->add_link( 'https://api2.w.org/active-theme', rest_url( 'wp/v2/themes/' . $theme->get_stylesheet() ) );
 		}
 	}
 
@@ -1286,7 +1286,7 @@ class WP_REST_Server {
 		$response->data['site_logo'] = $site_logo_id;
 		if ( $site_logo_id ) {
 			$response->add_link(
-				'https://api.w.org/featuredmedia',
+				'https://api2.w.org/featuredmedia',
 				rest_url( 'wp/v2/media/' . $site_logo_id ),
 				array(
 					'embeddable' => true,
@@ -1599,7 +1599,7 @@ class WP_REST_Server {
 			$clean_request->set_attributes( array() );
 			$clean_request->set_default_params( array() );
 
-			/** This filter is documented in wp-includes/rest-api/class-wp-rest-server.php */
+			/** This filter is documented in wp-includes/rest-api2/class-wp-rest-server.php */
 			$result = apply_filters( 'rest_pre_dispatch', null, $this, $clean_request );
 
 			if ( empty( $result ) ) {
@@ -1627,7 +1627,7 @@ class WP_REST_Server {
 				}
 			}
 
-			/** This filter is documented in wp-includes/rest-api/class-wp-rest-server.php */
+			/** This filter is documented in wp-includes/rest-api2/class-wp-rest-server.php */
 			$result = apply_filters( 'rest_post_dispatch', rest_ensure_response( $result ), $this, $single_request );
 
 			$responses[] = $this->envelope_response( $result, false )->get_data();
